@@ -1,22 +1,56 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
 .landing {
   display: flex;
   flex-direction: column;
-  justify-self: center;
+  justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   text-align: center;
 }
 .landing--title {
-  font-size: 3em;
+  font-size: 4.5em;
   margin: 5px;
 }
 .landing--subTitle {
-  font-size: 2em;
-  margin: 3px;
+  font-size: 3em;
+  margin: 3.5px;
 }
 
 .page-block {
   min-height: 100vh;
   width: 100%;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.skills-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.skills-card--item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.skills-card--item-text {
+  font-size: 2em;
 }
 
 * {
