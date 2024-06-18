@@ -1,8 +1,11 @@
+@use "../partials/mixins";
+
+.content {
+  @include mixin.flex-display(column, center, center, nowrap);
+}
+
 .landing {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
+  @include mixin.flex-display(column, center, center, nowrap);
   text-align: center;
   &--title {
     font-size: 3em;
