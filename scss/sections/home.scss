@@ -1,24 +1,38 @@
 @use "../partials/mixins";
 
 .content {
-  @include mixin.flex-display(column, center, center, nowrap);
+  @include mixins.flex-display(column, center, center, nowrap);
 }
 
 .landing {
-  @include mixin.flex-display(column, center, center, nowrap);
+  @include mixins.flex-display(column, center, center, nowrap);
   text-align: center;
   &--title {
-    font-size: 3em;
+    font-size: 4.5em;
     margin: 5px;
   }
 
   &--subTitle {
-    font-size: 2em;
-    margin: 3px;
+    font-size: 3em;
+    margin: 3.5px;
   }
 }
 
 .page-block {
   min-height: 100vh;
   width: 100%;
+}
+
+.skills {
+  @include mixins.flex-display(column, center, flex-start);
+  &-card {
+    @include mixins.flex-display(row, center, flex-start, wrap);
+
+    &--item {
+      @include mixins.flex-display(row, center, flex-start, nowrap);
+      &-text {
+        font-size: 2em;
+      }
+    }
+  }
 }
