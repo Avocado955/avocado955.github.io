@@ -1,0 +1,27 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+}
+.landing--title {
+  font-size: 3em;
+  margin: 5px;
+}
+.landing--subTitle {
+  font-size: 2em;
+  margin: 3px;
+}
+
+.page-block {
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  border: 2px solid red;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
