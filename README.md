@@ -6,6 +6,8 @@ Welcome to my portfolio page repo. This web page project contains information ab
 
 This portfolio project is to create a central place for displaying my projects and abilities to others. This page itself is my first project to demonstrate my skills in HTML, CSS, SCSS and JavaScript.
 
+## <a href="https://avocado955.github.io/">Visit the live site here</a>
+
 ## Current Plan for building Portfolio
 
 - Get all basic HTML content out and into sections
