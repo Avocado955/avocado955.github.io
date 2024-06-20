@@ -83,3 +83,29 @@
     }
   }
 }
+
+.about {
+  @include mixins.flex-display(row, center, center);
+  &_group {
+    @include mixins.flex-display(row, center, center);
+  }
+  &-me {
+    @include mixins.flex-display(column, center, center);
+    &--item {
+      @include mixins.flex-display(row, center, center);
+      &-img {
+        width: 200px;
+        height: 300px;
+      }
+
+      &-text {
+        margin: 10px;
+        width: 400px;
+      }
+    }
+  }
+}
+
+.contact {
+  @include mixins.flex-display(column, center, center);
+}
