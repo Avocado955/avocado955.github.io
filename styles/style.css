@@ -7,6 +7,7 @@
 }
 
 .landing {
+  background-color: #31363f;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,10 +16,12 @@
   text-align: center;
 }
 .landing--title {
+  color: #eeeeee;
   font-size: 4.5em;
   margin: 5px;
 }
 .landing--subTitle {
+  color: #eeeeee;
   font-size: 3em;
   margin: 3.5px;
 }
@@ -29,6 +32,8 @@
 }
 
 .skills {
+  color: #eeeeee;
+  background-color: #222831;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,11 +58,20 @@
   font-size: 2em;
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #eeeeee;
+  background-color: #31363f;
+}
 .projects-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 .projects-card--item {
@@ -74,26 +88,33 @@
   height: 200px;
 }
 .projects-card--item-link {
+  color: #ffbfbf;
   text-decoration: none;
 }
 .projects-card--item-link:hover {
-  color: blue;
   text-decoration: underline;
   letter-spacing: 0.5px;
 }
 .projects-card--item-header {
+  font-size: 1.2em;
   text-decoration: underline;
 }
 .projects-card--item-text {
   max-width: 400px;
 }
+.projects-heading {
+  font-size: 2em;
+}
 
 .about {
+  color: #eeeeee;
+  background-color: #222831;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  padding: 10px;
 }
 .about_group {
   display: flex;
@@ -101,6 +122,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  padding: 50px;
 }
 .about-me {
   display: flex;
@@ -110,6 +132,7 @@
   flex-wrap: nowrap;
 }
 .about-me--item {
+  margin: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -121,16 +144,57 @@
   height: 300px;
 }
 .about-me--item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
   margin: 10px;
   width: 400px;
+  height: 300px;
+  font-size: 1.2em;
+}
+.about-me--item-text p {
+  text-align: center;
+}
+.about-me-heading {
+  font-size: 2em;
+}
+.about_credits {
+  text-align: right;
+  width: 100%;
 }
 
 .contact {
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 300px;
+  height: 350px;
+}
+.contact-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+}
+.contact-card--item-text {
+  font-size: 1.2em;
+}
+.contact-card--item-text a {
+  color: #ffbfbf;
+  text-decoration: none;
+}
+.contact-card--item-text a:hover {
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+}
+.contact-heading {
+  font-size: 2em;
 }
 
 * {
