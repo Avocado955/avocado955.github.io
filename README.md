@@ -8,9 +8,4 @@ This portfolio project is to create a central place for displaying my projects a
 
 <a href="https://avocado955.github.io/">Visit the live site here</a>
 
-## Current Plan for building Portfolio
 
-- Tech skills provide apporiate infomation about the skills
-- Condensed version for smaller screen which then displays options when clicked (Hamburger style or other drop down style)
-- Section by Section SCSS style it fit nicely on the page in the sections
-  - Making sure each section adjusts when screen size changes
