@@ -43,13 +43,13 @@
   &--title {
     color: v.$text-color;
     font-size: 4.5em;
-    margin: 5px;
+    margin: 15px;
   }
 
   &--subTitle {
     color: v.$text-color;
     font-size: 3em;
-    margin: 3.5px;
+    margin: 10px;
   }
 }
 
@@ -57,8 +57,6 @@
 .page-block {
   min-height: 100vh;
   width: 100%;
-
-  padding: 50px;
 }
 
 // Skills section
@@ -163,19 +161,30 @@
 .about {
   color: v.$text-color;
   background-color: v.$background-color1;
+  // if screen too small, column
   @include mixins.flex-display(row, center, center);
 
   //Handles the about_group
   &_group {
-    @include mixins.flex-display(row, center, center);
-    padding: 50px;
+    margin-top: 10px;
+    @include mixins.flex-display(column, center, center);
+
+    @include mixins.lg-screen {
+      @include mixins.flex-display(row, center, center);
+    }
   }
   // Handles the about-me section
   &-me {
+    margin-top: 10px;
     @include mixins.flex-display(column, center, center);
     // Handles the item inside about-me
     &--item {
-      @include mixins.flex-display(row, center, center);
+      @include mixins.flex-display(column, center, center);
+
+      @include mixins.md-screen {
+        @include mixins.flex-display(row, center, center);
+      }
+
       // Handles the img inside the about-me--item
       &-img {
         width: 200px;
@@ -197,6 +206,8 @@
     }
     // Handles the heading inside of about-me
     &-heading {
+      margin: 10px;
+      margin-top: 20px;
       font-size: 2em;
     }
   }
@@ -224,6 +235,7 @@
     &--item {
       // Handles the contact-card--item-text
       &-text {
+        margin: 5px;
         font-size: 1.2em;
         //targets all a tags inside of the text area (allows for text color change of the links)
         & a {
