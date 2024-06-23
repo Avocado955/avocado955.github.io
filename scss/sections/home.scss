@@ -5,6 +5,35 @@
   @include mixins.flex-display(column, center, center, nowrap);
 }
 
+// Nav Bar
+.navBar {
+  @include mixins.flex-display(row, flex-start, center, nowrap);
+  width: 100%;
+  background-color: v.$text-color;
+
+  // Keeps the navBar at the top of the screen
+  position: fixed;
+  top: 0;
+
+  &--list {
+    list-style: none;
+    &-item {
+      padding: 10px;
+      &-link {
+        font-size: 1.2em;
+        text-decoration: none;
+        &:hover {
+          color: blue;
+          text-decoration: underline;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    @include mixins.flex-display(row, flex-start, center, nowrap);
+  }
+}
+
 // Landing section
 .landing {
   background-color: v.$background-color2;
@@ -37,6 +66,7 @@
   @include mixins.flex-display(column, center, flex-start);
   // Handles the cards in the skills section
   &-card {
+    margin: 10px;
     @include mixins.flex-display(row, center, flex-start, wrap);
     // When screen too small only have column
 
@@ -103,7 +133,7 @@
   color: v.$text-color;
   background-color: v.$background-color1;
   @include mixins.flex-display(row, center, center);
-  padding: 10px;
+
   //Handles the about_group
   &_group {
     @include mixins.flex-display(row, center, center);
@@ -114,7 +144,6 @@
     @include mixins.flex-display(column, center, center);
     // Handles the item inside about-me
     &--item {
-      margin: 10px;
       @include mixins.flex-display(row, center, center);
       // Handles the img inside the about-me--item
       &-img {

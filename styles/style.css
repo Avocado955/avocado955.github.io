@@ -6,6 +6,38 @@
   flex-wrap: nowrap;
 }
 
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: #eeeeee;
+  position: fixed;
+  top: 0;
+}
+.navBar--list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.navBar--list-item {
+  padding: 10px;
+}
+.navBar--list-item-link {
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.navBar--list-item-link:hover {
+  color: blue;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}
+
 .landing {
   background-color: #31363f;
   display: flex;
@@ -41,6 +73,7 @@
   flex-wrap: nowrap;
 }
 .skills-card {
+  margin: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -114,7 +147,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 10px;
 }
 .about_group {
   display: flex;
@@ -132,7 +164,6 @@
   flex-wrap: nowrap;
 }
 .about-me--item {
-  margin: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -198,7 +229,7 @@
 }
 
 * {
-  border: 2px solid red;
+  scroll-behavior: smooth;
   margin: 0;
 }
 
