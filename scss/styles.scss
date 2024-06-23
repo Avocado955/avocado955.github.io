@@ -43,13 +43,13 @@
   &--title {
     color: v.$text-color;
     font-size: 4.5em;
-    margin: 5px;
+    margin: 15px;
   }
 
   &--subTitle {
     color: v.$text-color;
     font-size: 3em;
-    margin: 3.5px;
+    margin: 10px;
   }
 }
 
@@ -63,12 +63,16 @@
 .skills {
   color: v.$text-color;
   background-color: v.$background-color1;
-  @include mixins.flex-display(column, center, flex-start);
+  @include mixins.flex-display(column, center, center);
   // Handles the cards in the skills section
   &-card {
     margin: 10px;
-    @include mixins.flex-display(row, center, flex-start, wrap);
+
+    @include mixins.flex-display(column, center, center);
     // When screen too small only have column
+    @include mixins.sm-screen {
+      @include mixins.flex-display(row, center, flex-start, wrap);
+    }
 
     // Handles items in skills-card
     &--item {
@@ -76,8 +80,13 @@
       // Handles items in skills-card--item
       &-text {
         font-size: 2em;
+        padding: 10px;
       }
     }
+  }
+
+  &-heading {
+    font-size: 2.4em;
   }
 }
 
@@ -89,20 +98,34 @@
 
   // Handles the cards in the projects section
   &-card {
-    @include mixins.flex-display(row, center, center, wrap);
     // When screen too small only have column
-
+    @include mixins.flex-display(column, center, center);
+    @include mixins.md-screen {
+      @include mixins.flex-display(row, center, center, wrap);
+    }
     // Handles items in projects-card
     &--item {
-      @include mixins.flex-display(row, center, center, nowrap);
+      width: 600px;
+      height: 300px;
+      @include mixins.flex-display(column, center, center);
+
+      @include mixins.md-screen {
+        @include mixins.flex-display(row, center, center, wrap);
+        margin: 5px;
+      }
       // Handles Images for the projects-card--item
       &-img {
-        align-self: flex-start;
+        @include mixins.md-screen {
+          align-self: flex-start;
+        }
+        margin: 3px;
         width: 300px;
-        height: 200px;
+        height: 270px;
       }
       // Handles Links for the projects-card--item
       &-link {
+        margin: 10px;
+        padding: 5px;
         color: v.$link-color;
         text-decoration: none;
         &:hover {
@@ -118,7 +141,13 @@
       }
 
       &-text {
-        max-width: 400px;
+        max-width: 280px;
+        margin: 3px;
+        //If the screen is too small, dont display the text
+        display: none;
+        @include mixins.md-screen {
+          display: block;
+        }
       }
     }
   }
@@ -132,19 +161,30 @@
 .about {
   color: v.$text-color;
   background-color: v.$background-color1;
+  // if screen too small, column
   @include mixins.flex-display(row, center, center);
 
   //Handles the about_group
   &_group {
-    @include mixins.flex-display(row, center, center);
-    padding: 50px;
+    margin-top: 10px;
+    @include mixins.flex-display(column, center, center);
+
+    @include mixins.lg-screen {
+      @include mixins.flex-display(row, center, center);
+    }
   }
   // Handles the about-me section
   &-me {
+    margin-top: 10px;
     @include mixins.flex-display(column, center, center);
     // Handles the item inside about-me
     &--item {
-      @include mixins.flex-display(row, center, center);
+      @include mixins.flex-display(column, center, center);
+
+      @include mixins.md-screen {
+        @include mixins.flex-display(row, center, center);
+      }
+
       // Handles the img inside the about-me--item
       &-img {
         width: 200px;
@@ -166,6 +206,8 @@
     }
     // Handles the heading inside of about-me
     &-heading {
+      margin: 10px;
+      margin-top: 20px;
       font-size: 2em;
     }
   }
@@ -193,6 +235,7 @@
     &--item {
       // Handles the contact-card--item-text
       &-text {
+        margin: 5px;
         font-size: 1.2em;
         //targets all a tags inside of the text area (allows for text color change of the links)
         & a {

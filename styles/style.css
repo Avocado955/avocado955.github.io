@@ -50,12 +50,12 @@
 .landing--title {
   color: #eeeeee;
   font-size: 4.5em;
-  margin: 5px;
+  margin: 15px;
 }
 .landing--subTitle {
   color: #eeeeee;
   font-size: 3em;
-  margin: 3.5px;
+  margin: 10px;
 }
 
 .page-block {
@@ -69,16 +69,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
 }
 .skills-card {
   margin: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+@media only screen and (min-width: 570px) {
+  .skills-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
 .skills-card--item {
   display: flex;
@@ -89,6 +98,10 @@
 }
 .skills-card--item-text {
   font-size: 2em;
+  padding: 10px;
+}
+.skills-heading {
+  font-size: 2.4em;
 }
 
 .projects {
@@ -102,25 +115,53 @@
 }
 .projects-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+@media only screen and (min-width: 770px) {
+  .projects-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 .projects-card--item {
+  width: 600px;
+  height: 300px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
   text-align: center;
 }
+@media only screen and (min-width: 770px) {
+  .projects-card--item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px;
+  }
+}
 .projects-card--item-img {
-  align-self: flex-start;
+  margin: 3px;
   width: 300px;
-  height: 200px;
+  height: 270px;
+}
+@media only screen and (min-width: 770px) {
+  .projects-card--item-img {
+    align-self: flex-start;
+  }
 }
 .projects-card--item-link {
+  margin: 10px;
+  padding: 5px;
   color: #ffbfbf;
   text-decoration: none;
 }
@@ -133,7 +174,14 @@
   text-decoration: underline;
 }
 .projects-card--item-text {
-  max-width: 400px;
+  max-width: 280px;
+  margin: 3px;
+  display: none;
+}
+@media only screen and (min-width: 770px) {
+  .projects-card--item-text {
+    display: block;
+  }
 }
 .projects-heading {
   font-size: 2em;
@@ -149,14 +197,24 @@
   flex-wrap: nowrap;
 }
 .about_group {
+  margin-top: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 50px;
+}
+@media only screen and (min-width: 1000px) {
+  .about_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }
 .about-me {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,10 +223,19 @@
 }
 .about-me--item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+}
+@media only screen and (min-width: 770px) {
+  .about-me--item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }
 .about-me--item-img {
   width: 200px;
@@ -189,6 +256,8 @@
   text-align: center;
 }
 .about-me-heading {
+  margin: 10px;
+  margin-top: 20px;
   font-size: 2em;
 }
 .about_credits {
@@ -214,6 +283,7 @@
   flex-wrap: nowrap;
 }
 .contact-card--item-text {
+  margin: 5px;
   font-size: 1.2em;
 }
 .contact-card--item-text a {
