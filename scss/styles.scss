@@ -1,6 +1,18 @@
 @use "./partials/mixins";
 @use "./partials/variables" as v;
 
+// Font and links
+
+// Adding more projects and make the whole page more exciting over time
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  font-family: garamond;
+}
+
 .content {
   @include mixins.flex-display(column, center, center, nowrap);
 }
@@ -10,7 +22,6 @@
   @include mixins.flex-display(row, flex-start, center, nowrap);
   width: 100%;
   background-color: v.$text-color;
-
   // Keeps the navBar at the top of the screen
   position: fixed;
   top: 0;
@@ -22,6 +33,7 @@
       &-link {
         font-size: 1.2em;
         text-decoration: none;
+        color: black;
         &:hover {
           color: blue;
           text-decoration: underline;
@@ -90,6 +102,7 @@
   }
 }
 
+// Fix the issue with the size of the card making it weird on smaller screens
 // Projects section
 .projects {
   @include mixins.flex-display(column, center, center, wrap);
@@ -105,13 +118,14 @@
     }
     // Handles items in projects-card
     &--item {
-      width: 600px;
+      width: 300px;
       height: 300px;
       @include mixins.flex-display(column, center, center);
 
       @include mixins.md-screen {
         @include mixins.flex-display(row, center, center, wrap);
         margin: 5px;
+        width: 600px;
       }
       // Handles Images for the projects-card--item
       &-img {

@@ -1,3 +1,11 @@
+h1 h2 h3 h4 h5 h6 {
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  font-family: garamond;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -31,6 +39,7 @@
 .navBar--list-item-link {
   font-size: 1.2em;
   text-decoration: none;
+  color: black;
 }
 .navBar--list-item-link:hover {
   color: blue;
@@ -130,7 +139,7 @@
   }
 }
 .projects-card--item {
-  width: 600px;
+  width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -147,6 +156,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 5px;
+    width: 600px;
   }
 }
 .projects-card--item-img {
